@@ -1,0 +1,78 @@
+[
+  {
+    "id": "dse7ums7jkemnvhj873-1776010869745",
+    "userId": "dse7ums7jkemnvhj873",
+    "userName": "Participant",
+    "userEmail": "qwerty@gmail.com",
+    "caseStudy1Answers": {
+      "1": "",
+      "2": "piggybanking",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "caseStudy2Answers": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "case1Score": 1,
+    "case2Score": 0,
+    "finalScore": 1,
+    "totalTime": 14,
+    "tabSwitches": 0,
+    "submittedAt": "2026-04-12T16:21:07.190Z",
+    "startedAt": "2026-04-12T16:20:52.658Z",
+    "createdAt": "2026-04-12T16:21:09.745Z"
+  },
+  {
+    "id": "1lsegxg7t3bmnvz84nf-1776011258550",
+    "userId": "1lsegxg7t3bmnvz84nf",
+    "userName": "Participant",
+    "userEmail": "asdfgh@gmail.com",
+    "caseStudy1Answers": {
+      "1": "",
+      "2": "piggybanking",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "caseStudy2Answers": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": ""
+    },
+    "case1Score": 1,
+    "case2Score": 0,
+    "finalScore": 1,
+    "totalTime": 12,
+    "tabSwitches": 0,
+    "submittedAt": "2026-04-12T16:27:38.474Z",
+    "startedAt": "2026-04-12T16:27:26.369Z",
+    "createdAt": "2026-04-12T16:27:38.550Z"
+  }
+]

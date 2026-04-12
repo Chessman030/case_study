@@ -1,0 +1,20 @@
+[
+  {
+    "id": "dse7ums7jkemnvhj873",
+    "name": "qwerty",
+    "email": "qwerty@gmail.com",
+    "password": "$2a$10$tdFD7Ly98Dh/b8WKVV6KGeRCHaYEteiqiylqhlDGKkLSd9NKJxf0C",
+    "isAdmin": false,
+    "hasAttempted": false,
+    "createdAt": "2026-04-12T08:11:45.855Z"
+  },
+  {
+    "id": "1lsegxg7t3bmnvz84nf",
+    "name": "asdfgh",
+    "email": "asdfgh@gmail.com",
+    "password": "$2a$10$YwQsr66OaGFw.ivjWsyz2uVzBfXPyDDQBHlTbCelsSbUaqkGyMhfq",
+    "isAdmin": false,
+    "hasAttempted": true,
+    "createdAt": "2026-04-12T16:27:01.131Z"
+  }
+]
