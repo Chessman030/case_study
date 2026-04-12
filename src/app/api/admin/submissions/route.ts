@@ -10,7 +10,7 @@ export async function GET() {
       const submissions = await db
         .collection('case_study_submissions')
         .find()
-        .sort({ submittedAt: -1 })
+        .sort({ finalScore: -1, totalTime: 1 })
         .toArray()
 
       return NextResponse.json({
@@ -24,9 +24,14 @@ export async function GET() {
       
       return NextResponse.json({
         success: true,
-        submissions: submissions.sort((a, b) => 
-          new Date(b.submittedAt).getTime() - new Date(a.submittedAt).getTime()
-        ),
+        submissions: submissions.sort((a, b) => {
+          // Primary sort: finalScore descending (highest first)
+          if (b.finalScore !== a.finalScore) {
+            return b.finalScore - a.finalScore
+          }
+          // Secondary sort: totalTime ascending (lowest time first)
+          return a.totalTime - b.totalTime
+        }),
         source: 'fallback',
       })
     }
