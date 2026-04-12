@@ -4,10 +4,12 @@ import * as fallbackStorage from '@/lib/fallback-storage'
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { userId: string } }
+  { params }: { params: Promise<{ userId: string }> } // <-- Fix 1: Changed to Promise
 ) {
   try {
-    const userId = params.userId
+    // <-- Fix 2: Await the params before using them
+    const resolvedParams = await params
+    const userId = resolvedParams.userId
 
     try {
       const client = await getMongoClient()
