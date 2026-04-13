@@ -10,7 +10,7 @@ interface Submission {
   userName: string
   userEmail: string
   answers: { [questionId: number]: string }
-  score: number
+  finalScore: number // FIX 1: Updated from 'score' to 'finalScore'
   totalTime: number
   cheatScore: number
   tabSwitches: number
@@ -36,10 +36,11 @@ export default function AdminPage() {
 
   const fetchSubmissions = async () => {
     try {
-      const response = await fetch('/api/submissions')
+      const response = await fetch('/api/admin/submissions') // Note: Ensure this path matches your API folder exactly
       if (response.ok) {
         const data = await response.json()
-        setSubmissions(data)
+        // FIX 2: Extract the array from the object Vercel returns
+        setSubmissions(data.submissions || []) 
       }
     } catch (error) {
       console.error('Error fetching submissions:', error)
@@ -158,8 +159,9 @@ export default function AdminPage() {
                             </div>
                           </td>
                           <td className="px-6 py-4">
-                            <span className={`inline-flex rounded-full px-3 py-1 text-sm font-medium ${getScoreBadgeColor(submission.score)}`}>
-                              {submission.score}/{totalMarks}
+                            {/* FIX 3: Updated to finalScore */}
+                            <span className={`inline-flex rounded-full px-3 py-1 text-sm font-medium ${getScoreBadgeColor(submission.finalScore)}`}>
+                              {submission.finalScore}/{totalMarks}
                             </span>
                           </td>
                           <td className="px-6 py-4 text-sm text-slate-200">{formatTime(submission.totalTime)}</td>
@@ -194,8 +196,9 @@ export default function AdminPage() {
                           <p className="text-slate-400">{submission.userEmail}</p>
                         </div>
                         <div className="text-right">
-                          <div className={`mb-2 inline-flex rounded-full px-3 py-1 text-sm font-medium ${getScoreBadgeColor(submission.score)}`}>
-                            Score: {submission.score}/{totalMarks}
+                          {/* FIX 4: Updated to finalScore in detailed view */}
+                          <div className={`mb-2 inline-flex rounded-full px-3 py-1 text-sm font-medium ${getScoreBadgeColor(submission.finalScore)}`}>
+                            Score: {submission.finalScore}/{totalMarks}
                           </div>
                           <div className="text-sm text-slate-400">Submitted: {formatDate(submission.submittedAt)}</div>
                         </div>
