@@ -2,7 +2,10 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getMongoClient } from '@/lib/mongodb'
 import * as fallbackStorage from '@/lib/fallback-storage'
 
-export async function GET() {
+// 👇 THIS IS THE MAGIC LINE TO FIX THE DASHBOARD 👇
+export const dynamic = 'force-dynamic'
+
+export async function GET(request: NextRequest) {
   try {
     try {
       const client = await getMongoClient()
