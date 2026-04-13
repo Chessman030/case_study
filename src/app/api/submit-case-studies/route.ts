@@ -163,14 +163,22 @@ export async function POST(request: NextRequest) {
       const submissionsCollection = db.collection<CaseStudySubmission>('case_study_submissions')
       await submissionsCollection.insertOne(submission)
       console.info(`Submission saved to MongoDB for user ${userId}: Score=${finalScore}`)
+
+      // Update user profile to prevent duplicate attempts
+      const usersCollection = db.collection('users')
+      await usersCollection.updateOne(
+        { id: userId },
+        { $set: { hasAttempted: true } },
+      )
+      console.info(`User ${userId} marked as attempted in MongoDB`)
     } catch (mongoErr) {
       console.warn('MongoDB write failed, using fallback storage:', mongoErr)
       fallbackStorage.saveSubmission(submission)
       console.info(`Submission saved to JSON fallback for user ${userId}: Score=${finalScore}`)
+      
+      // Mark user as attempted in fallback storage
+      markUserAsAttempted(userId)
     }
-
-    // Mark user as attempted
-    markUserAsAttempted(userId)
 
     return NextResponse.json({
       success: true,
