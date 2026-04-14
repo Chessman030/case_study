@@ -22,9 +22,9 @@ function sanitize(value: string): string {
   return value
     .toLowerCase()
     .trim()
-    .replace(/[`'",;:={}']/g, '')  // Remove special characters
-    .replace(/\s*v\d+\.\d+.*$/g, '')  // Remove version patterns like v2.1
-    .replace(/\s+/g, ' ')      // Normalize multiple spaces to single space
+    .replace(/\s+v\d+\.\d+.*$/g, '')  // Remove version patterns like ' v2.1'
+    .replace(/[^a-z0-9\s-]/g, '')      // Keep only letters, numbers, spaces, and hyphens
+    .replace(/\s+/g, ' ')              // Normalize multiple spaces to single space
     .trim()
 }
 
