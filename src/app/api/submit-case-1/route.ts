@@ -22,7 +22,7 @@ function sanitize(value: string): string {
   return value
     .toLowerCase()
     .trim()
-    .replace(/[`'",;]/g, '')  // Remove quotes, backticks, commas, semicolons
+    .replace(/[`'",;:={}']/g, '')  // Remove special characters
     .replace(/\s*v\d+\.\d+.*$/g, '')  // Remove version patterns like v2.1
     .replace(/\s+/g, ' ')      // Normalize multiple spaces to single space
     .trim()
