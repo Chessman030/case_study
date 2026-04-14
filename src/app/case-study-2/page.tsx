@@ -28,10 +28,13 @@ Part 1: The Evidence
 
 Artifact A: Slack Chat Logs (Friday, 4:30 PM)
 
-[4:30 PM] @Dev_Dave: Hey team, the CI/CD pipeline is failing on the new logging module. 
-[4:32 PM] @Senior_Sarah: Did you update the text formatting package? 
+[4:30 PM] @Dev_Dave: Hey team, the CI/CD pipeline is failing on the new logging module.
+[4:32 PM] @Senior_Sarah: Did you update the text formatting package?
 [4:35 PM] @Dev_Dave: Yeah, I just swapped to color-formatter-pro. It fixed the build! Pushing to production now.
 [4:36 PM] @Senior_Sarah: Wait, didn't the security team flag that author last week?
+[4:37 PM] @Dev_Dave: Hmm, let me check... Actually, I don't see any recent comms about it. Code's already running on prod.
+[4:38 PM] @Senior_Sarah: This is concerning. Can you roll it back?
+[4:40 PM] @Dev_Dave: It's fine, we're running it in a container. Worst case we restart.
 
 Artifact B: Application Config (auth.config.ts)
 
