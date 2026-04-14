@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 
 // Answer key for Case Study 2 - Backend only, not exposed to frontend
 const ANSWER_KEY: Record<number, { primary: string; alternatives?: string[] }> = {
-  1: { primary: 'color-formatter-pro' ,alternatives: [" 'color formatter pro' V2.1"] },
+  1: { primary: 'color-formatter-pro' ,alternatives: [" 'color formatter pro' V2.1" , "`color-formatter-pro` v2.1"] },
   2: { primary: 'SuperSecretKey123' },
   3: { primary: 'backup_svc' },
   4: { primary: 'fintech-flow-database-backups' },
