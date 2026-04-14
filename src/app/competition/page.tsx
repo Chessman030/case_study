@@ -74,7 +74,7 @@ export default function AdminDashboard() {
     <div>
       <h1>Welcome Admin</h1>
       <button disabled={true} id="nuclear-delete-btn">Wipe Database</button>
-      <div style={{ display: 'none' }} className="secret-flag">
+      <div style={{ display: none }} className="secret-flag">
         Flag: Quantum{DOM_M4n1pul4t10n}
       </div>
     </div>
