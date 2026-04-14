@@ -8,7 +8,7 @@ const ANSWER_KEY: Record<number, { primary: string; alternatives?: string[] }> =
   4: { primary: "admin' OR 1=1 --" },
   5: { primary: 'image/jpeg' },
   6: { primary: 'disabled={true}', alternatives: ['disabled'] },
-  7: { primary: 'display: none' },
+  7: { primary: 'display: none' , alternatives: ['display:none', 'display: none;' , "display: 'none'"] },
   8: { primary: 'git logs', alternatives: ['git history', 'commit history'] },
   9: { primary: 'salt', alternatives: ['salting'] },
   10: { primary: 'admin/admin' },
