@@ -117,7 +117,7 @@ Artifact A: Slack Chat Logs (Friday, 4:30 PM)
 
 [4:30 PM] @Dev_Dave: Hey team, the CI/CD pipeline is failing on the new logging module. 
 [4:32 PM] @Senior_Sarah: Did you update the text formatting package? 
-[4:35 PM] @Dev_Dave: Yeah, I just swapped to \`color-formatter-pro\` v2.1. It fixed the build! Pushing to production now.
+[4:35 PM] @Dev_Dave: Yeah, I just swapped to color-formatter-pro. It fixed the build! Pushing to production now.
 [4:36 PM] @Senior_Sarah: Wait, didn't the security team flag that author last week?
 
 Artifact B: Application Config (auth.config.ts)
